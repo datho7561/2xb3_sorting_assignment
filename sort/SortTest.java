@@ -11,6 +11,11 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+/**
+ * Tests for all the sorting methods. The tests also time the runtime
+ * of the algorithms.
+ * @author David Thompson
+ */
 public class SortTest {
 
 //	private Product[] arrayOfProducts;

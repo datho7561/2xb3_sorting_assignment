@@ -1,5 +1,9 @@
 package sort;
 
+/**
+ * Data type representing an item that is being sold
+ * @author David Thompson
+ */
 public class Product implements Comparable<Product> {
 	
 	private final String id;

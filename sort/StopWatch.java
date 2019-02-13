@@ -1,5 +1,9 @@
 package sort;
 
+/**
+ * A ADT for timing the execution of code,
+ * @author David Thompson
+ */
 public class StopWatch {
 
 	private long begin, end;

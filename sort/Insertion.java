@@ -1,5 +1,9 @@
 package sort;
 
+/**
+ * A collection of functions for insertion sort
+ * @author David Thompson
+ */
 public class Insertion {
 	
 	/**
@@ -32,7 +36,7 @@ public class Insertion {
 	}
 	
 	/**
-	 * Compare two products and return if the first is 'lesser' by the definition in the assignment
+	 * Compare two Products and return if the first is 'lesser' by the definition in the assignment
 	 * @param a The first item to compare
 	 * @param b The second item to compare
 	 * @return A boolean representing if the first item is lesser
@@ -41,7 +45,7 @@ public class Insertion {
 		
 		int salesDiff = a.getSalesAmt() - b.getSalesAmt();
 		
-		// If the sales aren't the same, indicate whidch is larger
+		// If the sales aren't the same, indicate which is larger
 		if (salesDiff != 0) {
 			return a.getSalesAmt() < b.getSalesAmt();
 		}

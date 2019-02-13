@@ -1,11 +1,12 @@
 package sort;
 
 /**
- * Implementation of sortMergeTD heavily inspired by the version in Algorithms by Sedgewick and Wayne.
+ * A collection of functions for merge sort
  * @author David Thompson
  */
 public class Merge {
 	
+	// Auxiliary array for use while merging
 	private static Comparable[] aux;
 	
 	/**
@@ -33,7 +34,7 @@ public class Merge {
 		sortMergeTD(x, begin, middle);
 		sortMergeTD(x, middle + 1, end);
 		
-		mergeTD(x, begin, middle, end);
+		merge(x, begin, middle, end);
 		
 	}
 	
@@ -64,7 +65,7 @@ public class Merge {
 					subarrayStart + 2*subarraySize - 1;
 				
 				// Merge!
-				mergeTD(x, subarrayStart, subarrayStart + subarraySize - 1, endOfSecondSubarray);
+				merge(x, subarrayStart, subarrayStart + subarraySize - 1, endOfSecondSubarray);
 				
 			}
 			
@@ -73,13 +74,15 @@ public class Merge {
 	}
 	
 	/**
-	 * Merge two subarrays. I used the method from Algorithms by Sedgewick and Wayne on page 271.
+	 * Merge two subarrays.
+	 * I used a modified version of the method from Algorithms
+	 * by Sedgewick and Wayne on page 271.
 	 * @param x The array from which to pull the subarrays
 	 * @param begin The beginning of the first subarray
 	 * @param middle The last element of the first subarray
 	 * @param end The end of the second subarray
 	 */
-	private static void mergeTD(Comparable[] x, int begin, int middle, int end) {
+	private static void merge(Comparable[] x, int begin, int middle, int end) {
 		
 		// Maintain pointers to the first element of each list
 		int pointer1 = begin;

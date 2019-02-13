@@ -1,5 +1,9 @@
 package sort;
 
+/**
+ * A collection of functions for heapsort
+ * @author David Thompson
+ */
 public class Heap {
 	
 	/**

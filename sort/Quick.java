@@ -2,6 +2,10 @@ package sort;
 
 import java.util.Random;
 
+/**
+ * A collection of functions for quicksort
+ * @author David Thompson
+ */
 public class Quick {
 	
 	private static Random random = new Random();
@@ -47,7 +51,7 @@ public class Quick {
 		
 		int pivotIndex = begin + random.nextInt(end - begin);
 		
-		// TODO: partition
+		// TODO: code me
 		
 		return pivotIndex;
 		
