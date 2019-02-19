@@ -1,7 +1,7 @@
 package sort;
 
 /**
- * A ADT for timing the execution of code,
+ * An ADT for timing the execution of code.
  * @author David Thompson
  */
 public class StopWatch {
@@ -9,10 +9,19 @@ public class StopWatch {
 	private long begin, end;
 	
 	/**
-	 * Make a enw StopWatch. Note that it starts taking time immediately
+	 * Make a StopWatch. Note that it starts taking time immediately
 	 */
 	public StopWatch() {
-		begin = System.currentTimeMillis();
+		begin = -1;
+		end = -1;
+	}
+	
+	/**
+	 * Start the stopwatch. Runtime will be calculated from when this
+	 * is called.
+	 */
+	public void tick() {
+		begin = System.nanoTime();
 		end = -1;
 	}
 	
@@ -21,15 +30,15 @@ public class StopWatch {
 	 * time elapsed using this as the end point.
 	 */
 	public void tock() {
-		end = System.currentTimeMillis();
+		end = System.nanoTime();
 	}
 	
 	/**
-	 * Get how long the StopWatch ran for in millis as a long.
-	 * @return A long representing the runtime of the StopWatch in millis
+	 * Get how long the StopWatch ran for in nanos as a long.
+	 * @return A long representing the runtime of the StopWatch in nanos
 	 */
-	public long getRuntimeMillis() {
-		if (end < 0) return System.currentTimeMillis() - begin;
+	public long getRuntimeNanos() {
+		if (end < 0) return System.nanoTime() - begin;
 		return end - begin;
 	}
 	
@@ -38,8 +47,8 @@ public class StopWatch {
 	 * @return A double representing the runtime of the StopWatch in seconds
 	 */
 	public double getRuntimeSeconds() {
-		if (end < 0) return (System.currentTimeMillis() - begin)/1000.0;
-		return (begin - end)/1000.0;
+		if (end < 0) return (System.nanoTime() - begin)/1000000000.0;
+		return (begin - end)/1000000000.0;
 	}
 	
 }

@@ -63,6 +63,23 @@ public class Gen {
 						+ random.nextInt(1048576) + "}");
 			}
 			wr.write("\r\n");
+			
+			// Modifications I made in order to make the large sample data
+//			for (int i = 0; i < 16384; i++) {
+//				if (i > 0)
+//					wr.write(",");
+//				wr.write("{" + UUID.randomUUID() + ","
+//						+ random.nextInt(1048576) + "}");
+//			}
+//			wr.write("\r\n");
+//			for (int i = 0; i < 65536; i++) {
+//				if (i > 0)
+//					wr.write(",");
+//				wr.write("{" + UUID.randomUUID() + ","
+//						+ random.nextInt(1048576) + "}");
+//			}
+//			wr.write("\r\n");
+			
 		} 
 		finally {
 			if (wr != null)
